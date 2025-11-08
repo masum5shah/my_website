@@ -1,0 +1,277 @@
+/* ===== General Setup ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff; /* White page background */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+input[type="text"],
+select {
+    border: 1px solid #7F9DB9;
+    padding: 3px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+select {
+    background-color: #fff;
+}
+
+label {
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* ===== Header ===== */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #DCDCDC;
+}
+
+.required-info {
+    color: #E00000;
+    font-weight: bold;
+}
+
+.navigation-steps .step-active {
+    font-weight: bold;
+    color: #000;
+}
+.navigation-steps .step-inactive {
+    color: #003399;
+}
+
+/* ===== THIS IS THE KEY FIX ===== */
+.main-form-panel {
+    background-color: #F5F7F9; /* The single light blue-grey background */
+    border: 1px solid #DCDCDC; /* The single border */
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 1.1em;
+    color: #E00000; /* Red */
+    margin: 0 0 15px 0; /* Margin bottom */
+}
+/* Add space above titles, except the first one */
+.section-title:not(:first-child) {
+    margin-top: 25px; /* Space between sections */
+}
+
+/* Remove background/border from individual layout grids */
+.form-grid {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+/* ===== 1. Donor Information (CSS Grid) ===== */
+.donor-info-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 1fr;
+    gap: 10px 15px;
+    align-items: center;
+}
+
+.donor-info-grid label {
+    text-align: right;
+}
+
+.grid-span-3 {
+    grid-column: 2 / span 3;
+}
+
+.grid-span-all {
+    grid-column: 1 / -1;
+    margin-top: 5px; /* Tighter spacing */
+}
+
+/* Styling complex groups inside the grid */
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-group .group-label {
+    width: 100px;
+    text-align: right;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.radio-group label {
+    text-align: left;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+.radio-group input[type="radio"] {
+    margin-right: 4px;
+}
+
+.small-text {
+    font-size: 0.8em;
+    color: #666;
+    margin-left: 115px;
+    width: 100%;
+    margin-top: 2px;
+}
+.small-text-inline {
+    font-size: 0.8em;
+    color: #666;
+    margin-left: 5px;
+}
+
+.other-amount-group {
+    display: flex;
+    align-items: center;
+    margin-left: 115px;
+    margin-top: 5px;
+}
+.other-amount-group label {
+    text-align: left;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+.other-amount-group input {
+    width: 100px;
+}
+
+/* Recurring Donation */
+.recurring-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1;
+}
+.recurring-group > input[type="checkbox"] {
+    margin-right: 5px;
+}
+.recurring-group > label {
+    text-align: left;
+    margin-right: 10px;
+}
+.recurring-group .small-text {
+    margin-left: 0;
+    margin-right: 10px;
+    width: auto;
+}
+
+.credit-card-group {
+    display: flex;
+    align-items: center;
+    margin-left: 115px; /* Aligns with "Other Amount" */
+    margin-top: 5px;
+    width: 100%;
+}
+.credit-card-group label {
+    text-align: left;
+    margin: 0 5px;
+}
+.credit-card-group input {
+    width: 60px;
+}
+
+/* ===== 2. Honorarium Info (CSS Grid) ===== */
+.honor-info-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr; /* Wider label column */
+    gap: 10px 15px;
+    align-items: center;
+}
+
+.honor-info-grid label {
+    text-align: right;
+}
+.honor-info-grid .radio-group {
+    flex-wrap: nowrap;
+}
+.honor-info-grid .radio-group label {
+    text-align: left;
+}
+.honor-info-grid input,
+.honor-info-grid select {
+    max-width: 300px;
+}
+.hidden-input {
+    visibility: hidden;
+}
+
+/* ===== 3. Additional Information (Flexbox) ===== */
+.additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Space between items */
+}
+.additional-info p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.form-group-additional {
+    display: flex;
+    align-items: center;
+}
+.form-group-additional label {
+    width: 50px;
+    margin-right: 10px;
+}
+.form-group-additional input {
+    flex: 1;
+    max-width: 400px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+}
+.checkbox-group input[type="checkbox"] {
+    margin-top: 3px;
+    margin-right: 8px;
+}
+.checkbox-group label {
+    font-size: 0.9em;
+}
+
+.comments-group {
+    display: flex;
+    flex-direction: column;
+}
+.comments-group label {
+    font-weight: bold;
+}
+.comments-group textarea {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #7F9DB9;
+    padding: 5px;
+    margin-top: 5px; /* Space from label/text */
+}
+
+.contact-method-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contact-method-group .group-label {
+    font-weight: bold;
+}
