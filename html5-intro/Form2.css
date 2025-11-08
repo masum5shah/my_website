@@ -1,7 +1,6 @@
-/* ===== General Setup ===== */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fff; /* White page background */
+    background-color: #fff; 
     margin: 0;
     padding: 20px;
     display: flex;
@@ -31,7 +30,6 @@ label {
     color: #333;
 }
 
-/* ===== Header ===== */
 .header-nav {
     display: flex;
     justify-content: space-between;
@@ -55,31 +53,30 @@ label {
     color: #003399;
 }
 
-/* ===== THIS IS THE KEY FIX ===== */
 .main-form-panel {
-    background-color: #F5F7F9; /* The single light blue-grey background */
-    border: 1px solid #DCDCDC; /* The single border */
+    background-color: #F5F7F9;
+    border: 1px solid #DCDCDC;
     padding: 20px;
 }
 
 .section-title {
     font-size: 1.1em;
-    color: #E00000; /* Red */
-    margin: 0 0 15px 0; /* Margin bottom */
-}
-/* Add space above titles, except the first one */
-.section-title:not(:first-child) {
-    margin-top: 25px; /* Space between sections */
+    color: #E00000;
+    margin: 0 0 15px 0;
 }
 
-/* Remove background/border from individual layout grids */
+.section-title:not(:first-child) {
+    margin-top: 25px;
+}
+
+
 .form-grid {
     padding: 0;
     border: none;
     background: none;
 }
 
-/* ===== 1. Donor Information (CSS Grid) ===== */
+
 .donor-info-grid {
     display: grid;
     grid-template-columns: 100px 1fr 100px 1fr;
@@ -97,10 +94,10 @@ label {
 
 .grid-span-all {
     grid-column: 1 / -1;
-    margin-top: 5px; /* Tighter spacing */
+    margin-top: 5px;
 }
 
-/* Styling complex groups inside the grid */
+
 .form-group {
     display: flex;
     flex-wrap: wrap;
@@ -156,7 +153,6 @@ label {
     width: 100px;
 }
 
-/* Recurring Donation */
 .recurring-group {
     display: flex;
     flex-wrap: wrap;
@@ -179,7 +175,7 @@ label {
 .credit-card-group {
     display: flex;
     align-items: center;
-    margin-left: 115px; /* Aligns with "Other Amount" */
+    margin-left: 115px; 
     margin-top: 5px;
     width: 100%;
 }
@@ -191,10 +187,10 @@ label {
     width: 60px;
 }
 
-/* ===== 2. Honorarium Info (CSS Grid) ===== */
+
 .honor-info-grid {
     display: grid;
-    grid-template-columns: 180px 1fr; /* Wider label column */
+    grid-template-columns: 180px 1fr;
     gap: 10px 15px;
     align-items: center;
 }
@@ -216,11 +212,11 @@ label {
     visibility: hidden;
 }
 
-/* ===== 3. Additional Information (Flexbox) ===== */
+
 .additional-info {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Space between items */
+    gap: 12px;
 }
 .additional-info p {
     font-size: 0.9em;
@@ -264,7 +260,7 @@ label {
     max-width: 600px;
     border: 1px solid #7F9DB9;
     padding: 5px;
-    margin-top: 5px; /* Space from label/text */
+    margin-top: 5px;
 }
 
 .contact-method-group {
