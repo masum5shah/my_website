@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CSE Student - Farhad Masum">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="librarymanage_system.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Library Management System</h1>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="bookTitle">Book Title:</label>
+                <input type="text" id="bookTitle" placeholder="Enter book title">
+            </div>
+            
+            <div class="input-group">
+                <label for="publicationYear">Publication Year:</label>
+                <input type="text" id="publicationYear" placeholder="Enter publication year">
+            </div>
+            
+            <button id="addBookBtn">Add Book</button>
+        </div>
+        
+        <div id="errorMessage" class="error-message"></div>
+        <h2>Book List</h2>
+        <table id="bookTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody id="bookTableBody">
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="librarymanage_system.js"></script>
+</body>
+</html>
