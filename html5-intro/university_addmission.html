@@ -1,0 +1,73 @@
+<html lang="en">\
+<head>
+<meta charset="UTF-8">
+<title> University Admission </title>
+</head>
+<body>
+<h1>University Admission</h1>
+<form action="#" method="post" enctype="multipart/form-data">
+    <fieldset>
+    <legend> Admission Form </legend>
+    <label for="name"> Full Name: </label>
+    <input type="text" id="name" name="fullname" required> <br><br>
+    <label for="dob"> Date of Birth: </label>
+    <input type="date" id="dob" name="dob" required> <br><br>
+    <label for="email"> Email: </label>
+    <input type="email" id="email" name="email" required> <br><br>
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male"> Male </label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female"> Female </label>
+    <input type="radio" id="other" name="gender" value="other" required>
+    <label for="other"> Other </label> <br><br>
+    <label for="address"> Address: </label>
+    <input type="text" id="address" name="address" maxlength="100" required> <br><br>
+
+    <label>Interests:</label>
+    <input type="checkbox" id="sports" name="interests" value="sports">
+    <label for="sports"> Sports </label>
+    <input type="checkbox" id="music" name="interests" value="music">
+    <label for="music"> Music </label>
+    <input type="checkbox" id="reading" name="interests" value="Reading">
+    <label for="reading"> Reading </label>
+    <input type="checkbox" id="traveling" name="interests" value="traveling">
+    <label for="traveling"> Traveling </label>
+    <input type="checkbox" id="technology" name="interests" value="Technology">
+    <label for="technology"> Technology </label> <br><br>
+
+    </fieldset>
+
+    <fieldset>
+    <legend> Academic Information </legend>
+    <label for ="SSC result"> SSC Result: </label>
+    <input type="text" id="ssc_result" name="ssc_result" required>
+    <label for="hscResult">HSC/A-Level Result:</label>
+      <input type="text" id="hscResult" name="hscResult" required maxlength="10"><br><br>
+      
+      <label for="preferredDept">Preferred Department:</label>
+      <select id="preferredDept" name="preferredDept" required>
+        <option value="">--Select Department--</option>
+        <option value="CSE">Computer Science & Engineering</option>
+        <option value="EEE">Electrical & Electronic Engineering</option>
+        <option value="BBA">Business Administration</option>
+        <option value="ENG">English</option>
+        <option value="LAW">Law</option>
+      </select>
+      <br><br>
+      
+      <label for="admissionDate">Admission Test Date:</label>
+      <input type="date" id="admissionDate" name="admissionDate" required><br><br>
+      
+      <label for="documents">Upload Documents (Transcript, Resume):</label>
+      <input type="file" id="documents" name="documents" multiple required accept=".pdf,.doc,.docx,.jpg,.png">
+      <br><br>
+    </fieldset>
+    
+    <!-- Submit/Reset Buttons -->
+    <button type="submit">Submit Application</button>
+    <button type="reset">Reset</button>
+    
+</form>
+</body>   
+</html>
