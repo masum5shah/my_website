@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Farhad Masum">
+  <meta name="description" content="Testing CSS Overflow Properties">
+  <title>Overflow Handling Box</title>
+  <link rel="stylesheet" href="Overflowhandling.css">
+</head>
+<body>
+
+  <h1>CSS Overflow Property Testing</h1>
+  <p>This page demonstrates how different overflow values affect content that exceeds the box dimensions.</p>
+
+  <div class="box box-visible">
+    <h2>1. overflow: visible</h2>
+    <p>
+      This is a long paragraph to test the overflow property. When overflow is set to visible, 
+      the content will overflow outside the box boundaries. This is the default behavior. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt 
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      laboris nisi ut aliquip ex ea commodo consequat. The text keeps going beyond the box!
+    </p>
+  </div>
+  <div class="box box-hidden">
+    <h2>2. overflow: hidden</h2>
+    <p>
+      This is a long paragraph to test the overflow property. When overflow is set to hidden, 
+      any content that exceeds the box dimensions will be clipped and won't be visible. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt 
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      laboris nisi ut aliquip ex ea commodo consequat. You won't see this part of the text!
+    </p>
+  </div>
+  <div class="box box-scroll">
+    <h2>3. overflow: scroll</h2>
+    <p>
+      This is a long paragraph to test the overflow property. When overflow is set to scroll, 
+      scrollbars will always appear (both horizontal and vertical) even if content fits. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt 
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      laboris nisi ut aliquip ex ea commodo consequat. You can scroll to see all the content!
+    </p>
+  </div>
+  <div class="box box-auto">
+    <h2>4. overflow: auto</h2>
+    <p>
+      This is a long paragraph to test the overflow property. When overflow is set to auto, 
+      scrollbars will only appear if the content actually overflows the box. This is more user-friendly. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt 
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      laboris nisi ut aliquip ex ea commodo consequat. Smart scrollbars appear only when needed!
+    </p>
+  </div>
+
+</body>
+</html>
