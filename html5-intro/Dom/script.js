@@ -1,7 +1,4 @@
-// Student Management JS
-// Made by a CSE undergrad for fun and practice :)
 
-// Show first message if no students
 function showEmptyMessage() {
     const ul = document.getElementById('student-list');
     if (ul.children.length === 0) {
@@ -13,11 +10,9 @@ function showEmptyMessage() {
 }
 showEmptyMessage();
 
-// Listen for form submit
 const studentForm = document.getElementById('student-form');
 studentForm.addEventListener('submit', addStudent);
 
-// Highlight students button
 document.getElementById('highlight-btn').addEventListener('click', changeListStyle);
 
 function addStudent(event) {
@@ -29,24 +24,19 @@ function addStudent(event) {
     }
 
     const ul = document.getElementById('student-list');
-    // remove the empty message if present
     if (ul.querySelector('.empty-message')) {
         ul.innerHTML = '';
     }
-    // Make new list item
     let li = document.createElement('li');
     li.classList.add('student-item');
-    // Student name span
     let span = document.createElement('span');
     span.textContent = studentName;
-    // Edit button
     let editButton = document.createElement('button');
     editButton.textContent = 'Edit';
     editButton.className = 'btn-edit';
     editButton.addEventListener('click', function() {
         editStudent(li, span);
     });
-    // Delete button
     let deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
     deleteButton.className = 'btn-delete';
