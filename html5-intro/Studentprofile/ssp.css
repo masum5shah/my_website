@@ -1,3 +1,9 @@
+/* ========================================
+   STUDENT PROFILE PAGE STYLESHEET
+   Made by: Farhad Masum - CSE Student 🎓
+   ======================================== */
+
+/* Basic Reset and Body Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -5,6 +11,7 @@ body {
     padding: 20px;
 }
 
+/* Header Section */
 header {
     background-color: #34495e;
     color: white;
@@ -12,6 +19,7 @@ header {
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -24,6 +32,7 @@ header p {
     font-size: 1em;
 }
 
+/* Profile Section */
 .profile-section {
     background-color: white;
     width: 600px;
@@ -32,33 +41,47 @@ header p {
     border: 2px solid #3498db;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Profile Photo */
 .profile-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 3px solid #3498db;
     margin-bottom: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Name Heading */
 .profile-section h2 {
     color: #2c3e50;
     margin: 10px 0;
     font-size: 1.8em;
 }
 
+/* Student ID */
 .student-id {
     color: #7f8c8d;
     margin: 5px 0;
+    font-size: 1em;
 }
 
+/* Department */
 .department {
     color: #e74c3c;
     font-weight: bold;
     margin: 10px 0 20px 0;
+    font-size: 1.1em;
 }
 
+/* Bio Section */
 .bio {
     background-color: #ecf0f1;
     padding: 20px;
@@ -70,13 +93,16 @@ header p {
 .bio h3 {
     color: #2980b9;
     margin-top: 0;
+    font-size: 1.4em;
 }
 
 .bio p {
     line-height: 1.6;
     color: #2c3e50;
+    margin-bottom: 10px;
 }
 
+/* Footer Section */
 footer {
     background-color: #34495e;
     color: white;
@@ -84,6 +110,7 @@ footer {
     padding: 15px;
     margin-top: 30px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
@@ -93,4 +120,27 @@ footer p {
 footer a {
     color: #3498db;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #5dade2;
+    text-decoration: underline;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 650px) {
+    .profile-section {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    .profile-section h2 {
+        font-size: 1.5em;
+    }
 }
